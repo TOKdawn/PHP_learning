@@ -14,3 +14,19 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('zzpy',function () {
+
+    return view('zpy')->with('name','DawninShadow');
+});
+Route::get('zpy',function () {
+    $data = [
+        'name' => 'dawninshadow'
+    ];
+    return view('zpy',$data);
+});
+Route::get('zzzpy',function () {
+   $name = 'dawninShadow';
+    return view('zpy', compact('name'));
+});
+Route::get('about','MyController@getAbout');
