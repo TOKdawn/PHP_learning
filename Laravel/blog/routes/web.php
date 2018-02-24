@@ -30,3 +30,14 @@ Route::get('zzzpy',function () {
     return view('zpy', compact('name'));
 });
 Route::get('about','MyController@getAbout');
+Route::get('blade',function(){
+    $data = [
+        'name' => 'dawninshadow',
+        'age' => 24,
+        'love' => null
+    ];
+    return view('blade',$data);
+});
+Route::get('{number}',function($number){
+    return view('home ',$number);
+});
